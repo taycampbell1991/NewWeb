@@ -388,6 +388,89 @@ h1, h2, h3, h4 {
 .testimonial-card .who { font-weight: 600; color: var(--color-cream); }
 .testimonial-card .where { font-size: 0.85rem; color: var(--color-gold); }
 
+/* ===== Cash For Keys ===== */
+.cash-keys {
+  background: #201d1d;
+  color: var(--color-cream);
+  padding: 90px 0;
+  border-top: 1px solid rgba(224,187,38,0.2);
+  border-bottom: 1px solid rgba(224,187,38,0.2);
+}
+
+.cash-keys .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cash-keys h2 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); margin-bottom: 16px; }
+
+.ck-badge {
+  display: inline-flex;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.ck-location {
+  display: inline-block;
+  background: rgba(224,187,38,0.14);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  margin-bottom: 22px;
+}
+
+.ck-lede {
+  color: var(--color-text-muted);
+  max-width: 52ch;
+  margin-bottom: 26px;
+}
+
+.ck-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.ck-features li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+}
+
+.ck-features li::before {
+  content: '\2713';
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.ck-visual {
+  border: 1px solid rgba(224,187,38,0.35);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.03);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ck-visual svg { width: 100%; max-width: 260px; height: auto; }
+
 /* ===== CTA banner ===== */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
@@ -575,6 +658,9 @@ h1, h2, h3, h4 {
   .stats .container { grid-template-columns: repeat(2, 1fr); }
   .listing-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .cash-keys .container { grid-template-columns: 1fr; text-align: center; }
+  .ck-lede { margin-left: auto; margin-right: auto; }
+  .ck-visual { order: -1; max-width: 320px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
@@ -583,6 +669,7 @@ h1, h2, h3, h4 {
   .main-nav.open { transform: translateY(0); }
   .nav-toggle { display: flex; }
   .listing-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .ck-features { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
