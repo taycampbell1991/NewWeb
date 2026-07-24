@@ -408,6 +408,43 @@ h1, h2, h3, h4 {
 .testimonial-card .who { font-weight: 600; color: var(--color-bg); }
 .testimonial-card .where { font-size: 0.85rem; color: var(--color-gold-dark); }
 
+/* ===== Buyers & Sellers ===== */
+.bs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.bs-card {
+  background: #fff;
+  border-radius: var(--radius);
+  border-top: 3px solid var(--color-gold);
+  box-shadow: 0 12px 32px rgba(43,39,39,0.14);
+  padding: 40px 36px;
+}
+
+.bs-icon { width: 56px; height: 56px; margin-bottom: 20px; }
+
+.bs-card h3 { font-size: 1.4rem; margin-bottom: 14px; }
+
+.bs-card > p { color: #4a4444; margin-bottom: 24px; }
+
+.bs-list { margin-bottom: 30px; display: grid; gap: 10px; }
+
+.bs-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 0.92rem;
+  color: #3a3535;
+}
+
+.bs-list li::before {
+  content: '\2713';
+  color: var(--color-gold-dark);
+  font-weight: 700;
+}
+
 /* ===== Cash For Keys ===== */
 .cash-keys {
   background: #201d1d;
@@ -699,6 +736,7 @@ h1, h2, h3, h4 {
   .listing-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid, .approach-grid { grid-template-columns: 1fr; }
   .approach-photo { max-width: 320px; margin: 0 auto; }
+  .bs-grid { grid-template-columns: 1fr; }
   .cash-keys .container { grid-template-columns: 1fr; text-align: center; }
   .ck-lede { margin-left: auto; margin-right: auto; }
   .ck-visual { order: -1; max-width: 320px; margin: 0 auto; }
