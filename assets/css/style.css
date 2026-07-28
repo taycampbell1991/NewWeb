@@ -385,11 +385,51 @@ h1, h2, h3, h4 {
 }
 
 /* ===== Testimonials ===== */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+.testimonial-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 640px;
+  margin: 0 auto;
 }
+
+.carousel-track { flex: 1; min-width: 0; }
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: transparent;
+  color: var(--color-cream);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-arrow:hover { background: var(--color-gold); color: var(--color-gold-dark); border-color: var(--color-gold); }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  padding: 0;
+}
+
+.dot.is-active { background: var(--color-gold); }
 
 .testimonial-card {
   background: #ffffff;
@@ -398,6 +438,9 @@ h1, h2, h3, h4 {
   box-shadow: 0 12px 32px rgba(0,0,0,0.28);
   transition: transform var(--transition), box-shadow var(--transition);
 }
+
+.carousel-track .testimonial-card { display: none; }
+.carousel-track .testimonial-card.is-active { display: block; }
 
 .testimonial-card:hover {
   transform: translateY(-6px);
@@ -638,8 +681,10 @@ h1, h2, h3, h4 {
   .main-nav { position: fixed; top: 84px; left: 0; right: 0; background: var(--color-bg); flex-direction: column; align-items: flex-start; padding: 24px; gap: 20px; transform: translateY(-140%); transition: transform var(--transition); border-bottom: 1px solid rgba(255,255,255,0.2); }
   .main-nav.open { transform: translateY(0); }
   .nav-toggle { display: flex; }
-  .listing-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .listing-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; }
+  .testimonial-carousel { gap: 10px; }
+  .carousel-arrow { width: 36px; height: 36px; font-size: 1.3rem; }
 }

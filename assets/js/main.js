@@ -30,6 +30,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const carousel = document.querySelector('.testimonial-carousel');
+  if (carousel) {
+    const slides = carousel.querySelectorAll('.testimonial-card');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    let index = 0;
+    let timer;
+
+    const show = (i) => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((s, n) => s.classList.toggle('is-active', n === index));
+      dots.forEach((d, n) => d.classList.toggle('is-active', n === index));
+    };
+
+    const startTimer = () => {
+      clearInterval(timer);
+      timer = setInterval(() => show(index + 1), 6000);
+    };
+
+    carousel.querySelector('.carousel-prev').addEventListener('click', () => { show(index - 1); startTimer(); });
+    carousel.querySelector('.carousel-next').addEventListener('click', () => { show(index + 1); startTimer(); });
+    dots.forEach((d, n) => d.addEventListener('click', () => { show(n); startTimer(); }));
+
+    startTimer();
+  }
+
   const form = document.querySelector('.contact-form');
   if (form) {
     form.addEventListener('submit', (e) => {
