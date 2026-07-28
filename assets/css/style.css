@@ -496,24 +496,6 @@ h1, h2, h3, h4 {
   font-weight: 700;
 }
 
-.approach-grid {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 50px;
-  align-items: start;
-}
-
-.approach-photo {
-  aspect-ratio: 4/5;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.3);
-}
-
-.approach-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-.approach-cards { display: grid; gap: 20px; }
-
 /* ===== Contact ===== */
 .contact-grid {
   display: grid;
@@ -647,8 +629,7 @@ h1, h2, h3, h4 {
   .hero-badge img { width: 190px; height: 190px; }
   .stats .container { grid-template-columns: repeat(2, 1fr); }
   .listing-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-  .about-grid, .contact-grid, .approach-grid { grid-template-columns: 1fr; }
-  .approach-photo { max-width: 320px; margin: 0 auto; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .bs-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
