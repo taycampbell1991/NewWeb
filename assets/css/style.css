@@ -450,12 +450,16 @@ h1, h2, h3, h4 {
 }
 
 .bs-card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border-radius: var(--radius);
   border-top: 3px solid var(--color-gold-dark);
   box-shadow: 0 12px 32px rgba(43,39,39,0.14);
   padding: 40px 36px;
 }
+
+.bs-card > .btn { margin-top: auto; }
 
 .bs-icon { width: 56px; height: 56px; margin-bottom: 20px; }
 
