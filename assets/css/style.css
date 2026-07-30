@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
 .hero .container {
   position: relative;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1fr;
   gap: 60px;
   align-items: center;
 }
@@ -219,16 +219,6 @@ h1, h2, h3, h4 {
 }
 
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-
-.hero-badge {
-  justify-self: center;
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 50%;
-  padding: 18px;
-  background: rgba(255,255,255,0.02);
-}
-
-.hero-badge img { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; }
 
 /* ===== Stats ===== */
 .stats {
@@ -665,11 +655,9 @@ h1, h2, h3, h4 {
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .hero .container { grid-template-columns: 1fr; text-align: center; }
+  .hero .container { text-align: center; }
   .hero p { margin-left: auto; margin-right: auto; }
   .hero-actions { justify-content: center; }
-  .hero-badge { order: -1; }
-  .hero-badge img { width: 190px; height: 190px; }
   .stats .container { grid-template-columns: repeat(2, 1fr); }
   .listing-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
