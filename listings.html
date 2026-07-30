@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -21,7 +22,7 @@
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="listings.html">Listings</a>
+      <a href="listings.html">Recently SOLD Homes</a>
       <a href="testimonials.html">Testimonials</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -695,6 +696,17 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Where They're Located</p>
+      <h2>Sold Homes Across Oregon</h2>
+      <p>Explore the map to see where Taylor has recently helped clients buy and sell.</p>
+    </div>
+    <div id="listings-map"></div>
+  </div>
+</section>
+
 <section class="cta-banner">
   <div class="container">
     <h2>Ready to take that next step?</h2>
@@ -717,7 +729,7 @@
         <h4>Explore</h4>
         <ul>
           <li><a href="about.html">About</a></li>
-          <li><a href="listings.html">Listings</a></li>
+          <li><a href="listings.html">Recently SOLD Homes</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -738,6 +750,9 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/js/listings-data.js"></script>
+<script src="assets/js/listings-map.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
