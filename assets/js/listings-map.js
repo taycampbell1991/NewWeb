@@ -30,4 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const group = L.featureGroup(markers);
     map.fitBounds(group.getBounds().pad(0.1));
   }
+
+  window.addEventListener('load', function () { map.invalidateSize(); });
+  setTimeout(function () { map.invalidateSize(); }, 300);
 });
