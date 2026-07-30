@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -41,8 +42,26 @@
         <a href="contact.html" class="btn btn-outline">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-badge">
-      <img src="assets/images/taylor-office.jpg" alt="Taylor Campbell, Oregon Realtor">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <img src="assets/images/taylor-stairs.jpg" alt="Taylor Campbell, Oregon Realtor">
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">Meet Taylor Campbell</p>
+      <h2 style="margin-bottom:20px;">An Oregon Realtor&reg; you can trust</h2>
+      <p>Taylor Campbell has spent 5 years helping Oregon families and individuals buy and sell homes with clarity and confidence, guiding over 217 families through the process. Raised in the Pacific Northwest, Taylor combines deep local market knowledge with a genuinely client-first approach.</p>
+      <p>Whether you're a first-time buyer navigating the process for the first time, or a seller looking to maximize your home's value, Taylor is committed to making the experience transparent, informed, and stress-free from the first showing to closing day.</p>
+      <p>When not helping clients find their next home, Taylor can be found exploring Oregon's trails and supporting local community initiatives.</p>
+      <ul class="credentials">
+        <li>Licensed Oregon Real Estate Broker</li>
+        <li>5 Years of Experience</li>
+        <li>217+ Families Helped</li>
+        <li>Local Market Specialist</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -131,6 +150,7 @@
         </div>
       </div>
     </div>
+    <div id="listings-map"></div>
     <div class="section-foot">
       <a href="listings.html" class="btn btn-outline-dark">See All SOLD Homes</a>
     </div>
@@ -180,6 +200,9 @@
   </div>
 </footer>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="assets/js/listings-data.js"></script>
+<script src="assets/js/listings-map.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
