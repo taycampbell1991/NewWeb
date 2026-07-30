@@ -69,8 +69,11 @@
       </div>
     </div>
 
-    <form class="contact-form">
+    <form class="contact-form" action="https://formsubmit.co/ajax/Taylor@urbanpacificrealestate.com" method="POST">
       <div class="form-success">Thanks for reaching out! Taylor will be in touch shortly.</div>
+      <div class="form-error">Something went wrong sending your message. Please try again or call/email directly.</div>
+      <input type="hidden" name="_subject" value="New website inquiry - Taylor Campbell Realtor">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="field">
           <label for="firstName">First Name</label>
@@ -96,7 +99,6 @@
         <textarea id="message" name="message" rows="5" required></textarea>
       </div>
       <button type="submit" class="btn btn-gold">Send Message</button>
-      <p class="form-note">This form is currently a front-end demo and does not yet send email &mdash; connect it to a form backend (e.g. Formspree, Netlify Forms) to go live.</p>
     </form>
   </div>
 </section>

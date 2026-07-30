@@ -60,8 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const success = document.querySelector('.form-success');
-      if (success) success.classList.add('visible');
-      form.reset();
+      const error = document.querySelector('.form-error');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      if (error) error.classList.remove('visible');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('Form submission failed');
+          if (success) success.classList.add('visible');
+          form.reset();
+        })
+        .catch(() => {
+          if (error) error.classList.add('visible');
+        })
+        .finally(() => {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 });
