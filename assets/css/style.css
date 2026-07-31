@@ -601,6 +601,19 @@ h1, h2, h3, h4 {
   color: #6b6565;
 }
 
+.form-guide-banner {
+  display: none;
+  background: #fff7e0;
+  border: 1px solid #e8cf7a;
+  color: #6b5410;
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-guide-banner.visible { display: block; }
+
 .form-success {
   display: none;
   background: #eafaf0;
