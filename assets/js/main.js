@@ -57,6 +57,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const form = document.querySelector('.contact-form');
   if (form) {
+    const guides = {
+      buyers: { label: "Buyer's Guide", file: 'assets/guides/buyers-guide.pdf' },
+      sellers: { label: "Seller's Guide", file: 'assets/guides/sellers-guide.pdf' }
+    };
+    const guideParam = new URLSearchParams(window.location.search).get('guide');
+    const guide = guides[guideParam] || null;
+
+    const banner = document.querySelector('.form-guide-banner');
+    const guideField = form.querySelector('input[name="guideRequested"]');
+    const subjectField = form.querySelector('input[name="_subject"]');
+
+    if (guide) {
+      if (banner) {
+        banner.textContent = 'Requesting: ' + guide.label + ' — fill out the form below and we’ll send it right over.';
+        banner.classList.add('visible');
+      }
+      if (guideField) guideField.value = guide.label;
+      if (subjectField) subjectField.value = 'New ' + guide.label + ' request - Taylor Campbell Realtor';
+    }
+
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const success = document.querySelector('.form-success');
@@ -75,6 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!res.ok) throw new Error('Form submission failed');
           if (success) success.classList.add('visible');
           form.reset();
+          if (guide) {
+            const link = document.createElement('a');
+            link.href = guide.file;
+            link.download = '';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          }
         })
         .catch(() => {
           if (error) error.classList.add('visible');
