@@ -484,5 +484,32 @@ const soldListings = [
     "meta": "3 bd &middot; 1 ba &middot; 858 sqft",
     "img": "assets/images/listings/beaverton-198th-ave.webp",
     "approx": false
+  },
+  {
+    "lat": 44.599546,
+    "lon": -123.245377,
+    "title": "277 NE Conifer Blvd Unit 132",
+    "address": "Corvallis, OR 97330",
+    "meta": "2 bd &middot; 1 ba &middot; 924 sqft",
+    "img": "assets/images/listings/corvallis-conifer-blvd.webp",
+    "approx": false
+  },
+  {
+    "lat": 44.636507,
+    "lon": -123.105932,
+    "title": "34505 Riverside Dr #6",
+    "address": "Albany, OR 97321",
+    "meta": "3 bd &middot; 2 ba &middot; 1,368 sqft",
+    "img": "assets/images/listings/albany-riverside-dr.webp",
+    "approx": true
+  },
+  {
+    "lat": 43.020118,
+    "lon": -123.293121,
+    "title": "335 Weaver Ave",
+    "address": "Myrtle Creek, OR 97457",
+    "meta": "3 bd &middot; 2 ba &middot; 1,678 sqft",
+    "img": "assets/images/listings/myrtlecreek-weaver-ave.webp",
+    "approx": true
   }
 ];
