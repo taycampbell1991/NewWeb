@@ -484,5 +484,14 @@ const soldListings = [
     "meta": "3 bd &middot; 1 ba &middot; 858 sqft",
     "img": "assets/images/listings/beaverton-198th-ave.webp",
     "approx": false
+  },
+  {
+    "lat": 44.599546,
+    "lon": -123.245377,
+    "title": "277 NE Conifer Blvd Unit 132",
+    "address": "Corvallis, OR 97330",
+    "meta": "2 bd &middot; 1 ba &middot; 924 sqft",
+    "img": "assets/images/listings/corvallis-conifer-blvd.webp",
+    "approx": false
   }
 ];
