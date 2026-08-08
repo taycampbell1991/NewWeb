@@ -511,5 +511,14 @@ const soldListings = [
     "meta": "3 bd &middot; 2 ba &middot; 1,678 sqft",
     "img": "assets/images/listings/myrtlecreek-weaver-ave.webp",
     "approx": true
+  },
+  {
+    "lat": 44.94334,
+    "lon": -123.075002,
+    "title": "665 Dian Ave NW",
+    "address": "Salem, OR 97304",
+    "meta": "3 bd &middot; 1 ba &middot; 1,494 sqft",
+    "img": "assets/images/listings/salem-dian-ave.jpg",
+    "approx": false
   }
 ];
