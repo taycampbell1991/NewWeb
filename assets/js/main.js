@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         banner.classList.add('visible');
       }
       if (guideField) guideField.value = guide.label;
-      if (subjectField) subjectField.value = 'New ' + guide.label + ' request - Taylor Campbell Realtor';
+      if (subjectField) subjectField.value = 'New ' + guide.label + ' request';
     }
 
     form.addEventListener('submit', (e) => {
